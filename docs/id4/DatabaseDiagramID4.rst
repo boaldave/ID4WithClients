@@ -1,4 +1,4 @@
-.. _refID4DatabaseObjects:
+.. _refDatabaseDiagramID4:
 IdentityServer4 Database Objects:
 =================================
 Client App Related Tables:
