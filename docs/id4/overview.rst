@@ -1,31 +1,24 @@
-IdentityServer4 Customizations
-==============================
-Most of ID4 configuration setting, instead of being hard-coded in the ASP.Net Core startup.cs file, can be set in database tables. The scripts below will set configurations to support the Authorization Flows for all the various technologies and will establish claims for users.
+IdentityServer4 Implementation Overview
+=======================================
+Since this project is intended to handle only Authentication, ID4 simply needs to be configured to Authenticate Client Applications and Users of Client Applications.
 
-We are not using ID4 for Authorization, only Authentication and have  developed a separate Authorization Service.
+Each of the Client Applications have their own Authentication Flows and require different configurations as follows:
 
-Here is a screen shot of the IdentityServer4 Database Objects:
 
-.. image:: images/ClientAppRelatedTables.png
-   :align: center
+Client Application Authentication Flow by Technology
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/IdentityResourcesRelatedTables.png
-   :align: center
+Angular.io:
+Login UI 
+Manage Users UI
+User Profile Profile 
 
-.. image:: images/ApiResourcesRelatedTables.png
-   :align: center
+ASP.Net MVC:
+User Profile Profile 
 
-.. image:: images/PersistedGrantTable.png
-   :align: center
-   
-Database Script:
-^^^^^^^^^^^^^^^^
-Client App Related Tables:
+ASP.Net WebForms:
+User Profile Profile 
 
-IdentityResources Related Tables:
+ASP.Net Core WebApi:
+User Profile Web Service
 
-Api Resources Related Tables:
-
-Persisted Grant Table:
-
-There are no configuration records in the Persisted Grant table. These represent the tokens created.
