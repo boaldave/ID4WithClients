@@ -421,3 +421,22 @@ Next you can run this script to create all database objects::
     GO
     ALTER TABLE [dbo].[IdentityClaims] CHECK CONSTRAINT [FK_IdentityClaims_IdentityResources_IdentityResourceId]
     GO
+
+    GRANT SELECT ON [dbo].[ApiClaims] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ApiResources] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ApiScopeClaims] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ApiScopes] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ApiSecrets] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientClaims] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientCorsOrigins] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientGrantTypes] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientIdPRestrictions] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientPostLogoutRedirectUris] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientRedirectUris] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[Clients] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientScopes] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[ClientSecrets] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[IdentityClaims] TO ID4SystemUser;
+    GRANT SELECT ON [dbo].[IdentityResources] TO ID4SystemUser;
+    GRANT SELECT, INSERT, DELETE ON [dbo].[PersistedGrants] TO ID4SystemUser;
+

@@ -21,7 +21,7 @@ Next you can run this script to create all database objects::
     GO
     ALTER ROLE [db_datawriter] ADD MEMBER [ID4SystemUser]
     GO
-    
+
     /****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 12/24/2017 9:36:29 AM ******/
     SET ANSI_NULLS ON
     GO
@@ -201,3 +201,13 @@ Next you can run this script to create all database objects::
     GO
     ALTER TABLE [dbo].[AspNetUserRoles] CHECK CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId]
     GO
+
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].AspNetRoleClaims TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetRoles] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetUserClaims] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetUserLogins] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetUserRoles] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetUsers] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[AspNetUserTokens] TO ID4SystemUser;
+    GRANT SELECT, DELETE, UPDATE, INSERT ON [dbo].[PasswordHistory] TO ID4SystemUser;
+

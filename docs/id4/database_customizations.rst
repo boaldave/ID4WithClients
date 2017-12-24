@@ -17,38 +17,40 @@ Connection Strings - appsettings.json
 Database Objects:
 ---------------------------------
 **IdentityServer4** 
+
 :ref:`IdentityServer4 Database Diagram <refDatabaseDiagramID4>`
+
 :ref:` - Generate Script<refDatabaseGenScriptID4>`
 
 **ASPNetIdentity** 
+
 :ref:`ASPNetIdentity Database Diagram <refDatabaseDiagramASPNetIdentity>`
+
 :ref:` - Generate Script<refDatabaseGenScriptASPNetIdentity>`
 
 
 
-ASPNetIdentity Database Objects:
---------------------------------
-
-
-
-Database Data Initialization Scripts:
+Data Initialization Scripts:
 -------------------------------------
-*IdentityServer4
-The scripts below set configurations to support the Authorization Flows for the various client applications considered in this project and  establish claims for users. Please note we developed a separate Authorization Service and are not using ID4 for Authorization, only Authentication.
+IdentityServer4
+^^^^^^^^^^^^^^^
+The linked scripts below set configurations to support the Authorization Flows for the various client applications considered in this project and  establish claims for users. Please note we developed a separate Authorization Service and are not using ID4 for Authorization, only Authentication.
 
-Client App Related Tables:
+**ClientApp Related Tables:**
+:ref:`ID4 Static Data - ClientApp Tables <refStaticDataID4ClientAppTables>`
 
-IdentityResources Related Tables:
+**ApiResources Related Tables:**
+:ref:`ID4 Static Data - ClientApp Tables <refStaticDataID4ClientAppTables>`
 
-Api Resources Related Tables:
+**IdentityResources and Claim Related Tables:**
+There is no configuration data at this time.
 
-Persisted Grant Table:
-
+**PersistedGrant Table:**
 There are no configuration records in the Persisted Grant table. These represent the tokens created.
-*ASPNetIdentity
 
-Database Object Initialization Scripts:
--------------------------------------
-*IdentityServer4
-*ASPNetIdentity
+ASPNetIdentity
+^^^^^^^^^^^^^^
+There are no configuration scripta for Users, and this was a deliberate decision.
+
+We decided to start with no users in ID4, forcing users to register their existing username (''Register User'' is discussed later), but we could have imported all of our existing users from our WebForms FormsAuth Authentication system.  The catch there, however, is there is no way to transfer passwords, users have to reset their password (''Password Reset'' is discussed later). When you force users to register their Username, they can use their existing password in the prior Authentication system.
 

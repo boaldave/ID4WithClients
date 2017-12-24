@@ -1,13 +1,12 @@
 Welcome to CodeQwik's IdentityServer4 Adventures
 ================================================
 
-.. image:: images/logo.png
-   :align: center
-
 IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.
 - the docs are `here: <https://identityserver4.readthedocs.io/en/release/>`_
 
-The purpose of this site is host production ready implementations of the following applications:
+The purpose of this site is host our implementations of the following applications and is intended to help other Organizations extend their knowledge of 3rd party Authentication of ASP.Net WebForms, to Xamarin, and Angular.io UI's.
+
+**PLEASE USE ANY AND ALL INFORMATION ON THIS SITE AT YOUR OWN RISK. NOTHNG ON THIS SITE HAS BEEN VALIDATED BY ANY SECURITY EXPERTS AND THIS DOCUMENT IS PROBABLY IN DRAFT FORM AT THIS VERY MOMENT. WE INVITE YOU TO SUGGEST CORRECTIONS AS SOON AS WE GET OUR BLOG UP AND RUNNING AGAIN AT www.codeqwik.net.**
 
 The applications built will include the following:
 - Custom Implementation of IdentityServer4
@@ -21,11 +20,11 @@ The applications built will demonstrate the following ID4 Features:
 
 Authentication as a Service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Centralized login logic and workflow for all of your applications (web, native, mobile, services).
+Centralized login logic and varying workflow for the following types of applications: Web UI (Angular.io, ASP.Net MVC, ASP.Net WebForms), Native Mobile (Xamarin), Web Services (ASP.Net Core).
 
 Both Independent and Single Sign-on / Sign-out
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Single sign-on (and out) over multiple application types.
+Independent sign-on (and out) is when you login to A Browser app, and also have to login to a Xamarin Mobile App app even if you run them at the same time with the same user. Single sign-on (and out) allows you to login (and out) once over multiple application types. You sign-in to one, and you are signed in to them all.
 
 Access Control for APIs by Client Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
