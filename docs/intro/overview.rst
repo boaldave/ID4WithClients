@@ -7,7 +7,7 @@ Welcome to CodeQwik's IdentityServer4 Adventures
 IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.
 - the docs are here: https://identityserver4.readthedocs.io/en/release/
 
-The purpose of this site is host production ready implementations of the following applications:
+The purpose of this site is to watch us code production ready implementations of the following applications:
 
 The applications built will include the following:
 - Custom Implementation of IdentityServer4
@@ -29,33 +29,35 @@ Single sign-on (and out) over multiple application types.
 
 Access Control for APIs by Client Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Issue access tokens for APIs for various types of clients, e.g. server to server, web applications, SPAs and native/mobile apps.
+Issue access tokens for APIs for various types of clients, e.g. server to server, web applications, SPAs and
+native/mobile apps.
 
 Federation Gateway
 ^^^^^^^^^^^^^^^^^^
-Support for external identity providers like Azure Active Directory, Google, Facebook etc. This shields your applications from the details of how to connect to these external providers.
+Support for external identity providers like Azure Active Directory, Google, Facebook etc.
+This shields your applications from the details of how to connect to these external providers.
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Introduction
 
-   intro/preamble
+   intro/overview
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: ID4 Customization
 
-   id4/overview
-   id4/client_credentials
-   id4/resource_owner_passwords
-   id4/interactive_login
-   id4/external_authentication
-   id4/hybrid_and_api_access
-   id4/aspnet_identity
-   id4/javascript_client
-   id4/entity_framework
+   ID4/overview
+   ID4/client_credentials
+   ID4/resource_owner_passwords
+   ID4/interactive_login
+   ID4/external_authentication
+   ID4/hybrid_and_api_access
+   ID4/aspnet_identity
+   ID4/javascript_client
+   ID4/entity_framework
  
 .. toctree::
    :maxdepth: 2
