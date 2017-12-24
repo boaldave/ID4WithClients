@@ -5,7 +5,7 @@ Welcome to CodeQwik's IdentityServer4 Adventures
    :align: center
 
 IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.
-- the docs are here: https://identityserver4.readthedocs.io/en/release/
+- the docs are `here: <https://identityserver4.readthedocs.io/en/release/>`_
 
 The purpose of this site is host production ready implementations of the following applications:
 

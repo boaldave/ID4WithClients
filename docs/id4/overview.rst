@@ -6,19 +6,23 @@ Each of the Client Applications have their own Authentication Flows and require 
 
 
 Client Application Authentication Flow by Technology
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------
 
 Angular.io:
+^^^^^^^^^^^
 Login UI 
 Manage Users UI
 User Profile Profile 
 
 ASP.Net MVC:
+^^^^^^^^^^^^
 User Profile Profile 
 
 ASP.Net WebForms:
+^^^^^^^^^^^^^^^^^
 User Profile Profile 
 
 ASP.Net Core WebApi:
+^^^^^^^^^^^^^^^^^^^^
 User Profile Web Service
 

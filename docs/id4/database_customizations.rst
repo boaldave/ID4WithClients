@@ -14,9 +14,6 @@ Connection Strings - appsettings.json
         "AspNetIdentityConnection": "Server=ABCServer;Database=AspNetIdentity; User id=SomeUser;Password=p@ssw0rd;MultipleActiveResultSets=true"
     },
 
-
-:doc:../ID4DatabaseObjects
-
 IdentityServer4 Database Objects:
 ---------------------------------
 Client App Related Tables:
@@ -34,6 +31,12 @@ Api Resources Related Tables:
 Persisted Grant Table:
 .. image:: images/PersistedGrantTable.png
    :align: center
+
+
+
+:ref:`IdentityServer4 Database Objects <refID4DatabaseObjects>`
+
+
 
 ASPNetIdentity Database Objects:
 --------------------------------
