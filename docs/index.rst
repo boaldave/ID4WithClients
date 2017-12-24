@@ -48,6 +48,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: ID4 Customization
 
    id4/overview
+   id4/database_customizations
    id4/client_credentials
    id4/resource_owner_passwords
    id4/interactive_login
