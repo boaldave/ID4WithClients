@@ -2,27 +2,32 @@
 IdentityServer4 Database Generation Script:
 ===========================================
 
-Before running the following script, you need to create the IdentityServer4 Database. Then you can run the following script to setup a Database Login Account::
+Before running the following script, you need to create the IdentityServer4 Database. Then you can run the following script to setup a Database Login Account:
+
+.. code-block:: sql
 
     USE [master]
     GO
-    /* For security reasons the login is created disabled and with a random password. */
-    /****** Object:  Login [ID4SystemUser]    Script Date: 12/24/2017 1:46:04 PM ******/
-    CREATE LOGIN [ID4SystemUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=ON, CHECK_POLICY=ON
+    CREATE LOGIN [ID4SystemUser] WITH PASSWORD=N'p@ssw0rd', 
+        DEFAULT_DATABASE=[master], 
+        DEFAULT_LANGUAGE=[us_english], 
+        CHECK_EXPIRATION=ON, 
+        CHECK_POLICY=ON
     GO
 
-Next you can run this script to create all database objects::
+Next you can run this script to create all database objects:
+
+.. code-block:: sql
 
     USE [IdentityServer4]
     GO
-    /****** Object:  User [ID4SystemUser]    Script Date: 12/24/2017 9:36:28 AM ******/
-    CREATE USER [ID4SystemUser] FOR LOGIN [ID4SystemUser] WITH DEFAULT_SCHEMA=[dbo]
+    CREATE USER [ID4SystemUser] FOR LOGIN [ID4SystemUser] 
+        WITH DEFAULT_SCHEMA=[dbo]
     GO
     ALTER ROLE [db_datareader] ADD MEMBER [ID4SystemUser]
     GO
     ALTER ROLE [db_datawriter] ADD MEMBER [ID4SystemUser]
     GO
-    /****** Object:  Table [dbo].[ApiClaims]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -34,11 +39,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ApiClaims] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ApiResources]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -52,11 +58,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ApiResources] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ApiScopeClaims]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -68,11 +75,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ApiScopeClaims] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ApiScopes]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -89,11 +97,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ApiScopes] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ApiSecrets]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -108,11 +117,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ApiSecrets] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientClaims]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -125,11 +135,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientClaims] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientCorsOrigins]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -141,11 +152,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientCorsOrigins] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientGrantTypes]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -157,11 +169,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientGrantTypes] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientIdPRestrictions]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -173,11 +186,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientIdPRestrictions] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientPostLogoutRedirectUris]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -189,11 +203,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientPostLogoutRedirectUris] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientRedirectUris]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -205,11 +220,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientRedirectUris] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[Clients]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -248,11 +264,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_Clients] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-    ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
+    ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientScopes]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -264,11 +281,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientScopes] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[ClientSecrets]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -283,11 +301,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_ClientSecrets] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[IdentityClaims]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -299,11 +318,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_IdentityClaims] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[IdentityResources]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -320,11 +340,12 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_IdentityResources] PRIMARY KEY CLUSTERED 
     (
         [Id] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
     ) ON [PRIMARY]
 
     GO
-    /****** Object:  Table [dbo].[PersistedGrants]    Script Date: 12/24/2017 7:58:12 AM ******/
     SET ANSI_NULLS ON
     GO
     SET QUOTED_IDENTIFIER ON
@@ -340,87 +361,128 @@ Next you can run this script to create all database objects::
     CONSTRAINT [PK_PersistedGrants] PRIMARY KEY CLUSTERED 
     (
         [Key] ASC
-    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-    ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+        IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) 
+        ON [PRIMARY]
+    ) ON [PRIMARY]
 
     GO
-    ALTER TABLE [dbo].[ApiClaims]  WITH CHECK ADD  CONSTRAINT [FK_ApiClaims_ApiResources_ApiResourceId] FOREIGN KEY([ApiResourceId])
-    REFERENCES [dbo].[ApiResources] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ApiClaims]  WITH CHECK ADD  
+        CONSTRAINT [FK_ApiClaims_ApiResources_ApiResourceId] 
+        FOREIGN KEY([ApiResourceId])
+        REFERENCES [dbo].[ApiResources] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ApiClaims] CHECK CONSTRAINT [FK_ApiClaims_ApiResources_ApiResourceId]
+    ALTER TABLE [dbo].[ApiClaims] CHECK 
+        CONSTRAINT [FK_ApiClaims_ApiResources_ApiResourceId]
     GO
-    ALTER TABLE [dbo].[ApiScopeClaims]  WITH CHECK ADD  CONSTRAINT [FK_ApiScopeClaims_ApiScopes_ApiScopeId] FOREIGN KEY([ApiScopeId])
-    REFERENCES [dbo].[ApiScopes] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ApiScopeClaims]  WITH CHECK ADD  
+        CONSTRAINT [FK_ApiScopeClaims_ApiScopes_ApiScopeId] 
+        FOREIGN KEY([ApiScopeId])
+        REFERENCES [dbo].[ApiScopes] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ApiScopeClaims] CHECK CONSTRAINT [FK_ApiScopeClaims_ApiScopes_ApiScopeId]
+    ALTER TABLE [dbo].[ApiScopeClaims] CHECK 
+        CONSTRAINT [FK_ApiScopeClaims_ApiScopes_ApiScopeId]
     GO
-    ALTER TABLE [dbo].[ApiScopes]  WITH CHECK ADD  CONSTRAINT [FK_ApiScopes_ApiResources_ApiResourceId] FOREIGN KEY([ApiResourceId])
-    REFERENCES [dbo].[ApiResources] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ApiScopes]  WITH CHECK ADD  
+        CONSTRAINT [FK_ApiScopes_ApiResources_ApiResourceId] 
+        FOREIGN KEY([ApiResourceId])
+        REFERENCES [dbo].[ApiResources] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ApiScopes] CHECK CONSTRAINT [FK_ApiScopes_ApiResources_ApiResourceId]
+    ALTER TABLE [dbo].[ApiScopes] CHECK 
+        CONSTRAINT [FK_ApiScopes_ApiResources_ApiResourceId]
     GO
-    ALTER TABLE [dbo].[ApiSecrets]  WITH CHECK ADD  CONSTRAINT [FK_ApiSecrets_ApiResources_ApiResourceId] FOREIGN KEY([ApiResourceId])
-    REFERENCES [dbo].[ApiResources] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ApiSecrets]  WITH CHECK ADD  
+        CONSTRAINT [FK_ApiSecrets_ApiResources_ApiResourceId] 
+        FOREIGN KEY([ApiResourceId])
+        REFERENCES [dbo].[ApiResources] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ApiSecrets] CHECK CONSTRAINT [FK_ApiSecrets_ApiResources_ApiResourceId]
+    ALTER TABLE [dbo].[ApiSecrets] CHECK 
+        CONSTRAINT [FK_ApiSecrets_ApiResources_ApiResourceId]
     GO
-    ALTER TABLE [dbo].[ClientClaims]  WITH CHECK ADD  CONSTRAINT [FK_ClientClaims_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientClaims]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientClaims_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientClaims] CHECK CONSTRAINT [FK_ClientClaims_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientClaims] CHECK 
+        CONSTRAINT [FK_ClientClaims_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientCorsOrigins]  WITH CHECK ADD  CONSTRAINT [FK_ClientCorsOrigins_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientCorsOrigins]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientCorsOrigins_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientCorsOrigins] CHECK CONSTRAINT [FK_ClientCorsOrigins_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientCorsOrigins] CHECK 
+        CONSTRAINT [FK_ClientCorsOrigins_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientGrantTypes]  WITH CHECK ADD  CONSTRAINT [FK_ClientGrantTypes_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientGrantTypes]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientGrantTypes_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientGrantTypes] CHECK CONSTRAINT [FK_ClientGrantTypes_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientGrantTypes] CHECK 
+        CONSTRAINT [FK_ClientGrantTypes_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientIdPRestrictions]  WITH CHECK ADD  CONSTRAINT [FK_ClientIdPRestrictions_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientIdPRestrictions]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientIdPRestrictions_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientIdPRestrictions] CHECK CONSTRAINT [FK_ClientIdPRestrictions_Clients_ClientId]
+        ALTER TABLE [dbo].[ClientIdPRestrictions] CHECK 
+        CONSTRAINT [FK_ClientIdPRestrictions_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientPostLogoutRedirectUris]  WITH CHECK ADD  CONSTRAINT [FK_ClientPostLogoutRedirectUris_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientPostLogoutRedirectUris]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientPostLogoutRedirectUris_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientPostLogoutRedirectUris] CHECK CONSTRAINT [FK_ClientPostLogoutRedirectUris_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientPostLogoutRedirectUris] CHECK 
+        CONSTRAINT [FK_ClientPostLogoutRedirectUris_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientRedirectUris]  WITH CHECK ADD  CONSTRAINT [FK_ClientRedirectUris_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientRedirectUris]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientRedirectUris_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientRedirectUris] CHECK CONSTRAINT [FK_ClientRedirectUris_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientRedirectUris] CHECK 
+        CONSTRAINT [FK_ClientRedirectUris_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientScopes]  WITH CHECK ADD  CONSTRAINT [FK_ClientScopes_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientScopes]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientScopes_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientScopes] CHECK CONSTRAINT [FK_ClientScopes_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientScopes] CHECK 
+        CONSTRAINT [FK_ClientScopes_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[ClientSecrets]  WITH CHECK ADD  CONSTRAINT [FK_ClientSecrets_Clients_ClientId] FOREIGN KEY([ClientId])
-    REFERENCES [dbo].[Clients] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[ClientSecrets]  WITH CHECK ADD  
+        CONSTRAINT [FK_ClientSecrets_Clients_ClientId] 
+        FOREIGN KEY([ClientId])
+        REFERENCES [dbo].[Clients] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[ClientSecrets] CHECK CONSTRAINT [FK_ClientSecrets_Clients_ClientId]
+    ALTER TABLE [dbo].[ClientSecrets] CHECK 
+        CONSTRAINT [FK_ClientSecrets_Clients_ClientId]
     GO
-    ALTER TABLE [dbo].[IdentityClaims]  WITH CHECK ADD  CONSTRAINT [FK_IdentityClaims_IdentityResources_IdentityResourceId] FOREIGN KEY([IdentityResourceId])
-    REFERENCES [dbo].[IdentityResources] ([Id])
-    ON DELETE CASCADE
+    ALTER TABLE [dbo].[IdentityClaims]  WITH CHECK ADD  
+        CONSTRAINT [FK_IdentityClaims_IdentityResources_IdentityResourceId] 
+        FOREIGN KEY([IdentityResourceId])
+        REFERENCES [dbo].[IdentityResources] ([Id])
+        ON DELETE CASCADE
     GO
-    ALTER TABLE [dbo].[IdentityClaims] CHECK CONSTRAINT [FK_IdentityClaims_IdentityResources_IdentityResourceId]
+    ALTER TABLE [dbo].[IdentityClaims] CHECK 
+        CONSTRAINT [FK_IdentityClaims_IdentityResources_IdentityResourceId]
     GO
 
     GRANT SELECT ON [dbo].[ApiClaims] TO ID4SystemUser;
