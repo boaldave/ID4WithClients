@@ -2,7 +2,9 @@
 AspNetIdentity Database Generation Script:
 ==========================================
 
-Before running the following script, you need to create the AspNetIdentity Database. Then you can run the following script to setup a Database Login Account::
+Before running the following script, you need to create the AspNetIdentity Database. Then you can run the following script to setup a Database Login Account:
+
+.. code-block:: sql
 
     USE [master]
     GO
@@ -11,7 +13,9 @@ Before running the following script, you need to create the AspNetIdentity Datab
     CREATE LOGIN [ID4SystemUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=ON, CHECK_POLICY=ON
     GO
 
-Next you can run this script to create all database objects::
+Next you can run this script to create all database objects:
+
+.. code-block:: sql
 
     USE [AspNetIdentity]
     /****** Object:  User [ID4SystemUser]    Script Date: 12/24/2017 9:36:28 AM ******/
