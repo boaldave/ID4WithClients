@@ -9,7 +9,7 @@ ID4 needs data for Functional Setting and for Users (if Users are not stored at 
 Connection Strings - appsettings.json
 -------------------------------------
  ::
- 
+
     "ConnectionStrings": {
         "IdentityServerConnection": "Server=ABCServer;Database=IdentityServer4;User id=SomeUser;Password=p@ssw0rd;MultipleActiveResultSets=true",
 
@@ -22,13 +22,13 @@ IdentityServer4
 ^^^^^^^^^^^^^^^
 :ref:`IdentityServer4 Database Diagram <refDatabaseDiagramID4>`
 
-:ref:` - Generate Script<refDatabaseGenScriptID4>`
+:ref:`Generate Script<refDatabaseGenScriptID4>`
 
 ASPNetIdentity 
 ^^^^^^^^^^^^^^
 :ref:`ASPNetIdentity Database Diagram <refDatabaseDiagramASPNetIdentity>`
 
-:ref:` - Generate Script<refDatabaseGenScriptASPNetIdentity>`
+:ref:`Generate Script<refDatabaseGenScriptAspNetIdentity>`
 
 Data Initialization Scripts:
 ----------------------------
@@ -37,15 +37,19 @@ IdentityServer4
 The linked scripts below set configurations to support the Authorization Flows for the various client applications considered in this project and  establish claims for users. Please note we developed a separate Authorization Service and are not using ID4 for Authorization, only Authentication.
 
 **ClientApp Related Tables:**
+
 :ref:`ID4 Static Data - ClientApp Tables <refStaticDataID4ClientAppTables>`
 
 **ApiResources Related Tables:**
+
 :ref:`ID4 Static Data - ClientApp Tables <refStaticDataID4ClientAppTables>`
 
 **IdentityResources and Claim Related Tables:**
+
 There is no configuration data at this time.
 
 **PersistedGrant Table:**
+
 There are no configuration records in the Persisted Grant table. These represent the tokens created.
 
 ASPNetIdentity
