@@ -4,7 +4,7 @@ Static Data: ID4 Database APIResources Tables:
 
 The following scripts require a lot of explanation, as they define the behavior of Identity Server 4, and every column counts.
 
-''Question:''
+''LOH LOH LOH:''
 #Why do the Resource and Scope have the same name?
 
 Here are the static data scripts::
