@@ -3,5 +3,5 @@ ASPNetIdentity Database Objects:
 =================================
 All Tables:
 --------------------------
-.. image:: images/ApiResourcesRelatedTables.png
-   :align: center
+.. image:: images/ASPNetIdentityTables.png
+   :align: left

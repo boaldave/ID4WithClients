@@ -4,19 +4,19 @@ IdentityServer4 Database Objects:
 Client App Related Tables:
 --------------------------
 .. image:: images/ClientAppRelatedTables.png
-   :align: center
+   :align: left
 
 IdentityResources Related Tables:
 ---------------------------------
 .. image:: images/IdentityResourcesRelatedTables.png
-   :align: center
+   :align: left
 
 Api Resources Related Tables:
 -----------------------------
 .. image:: images/ApiResourcesRelatedTables.png
-   :align: center
+   :align: left
 
 Persisted Grant Table:
 ----------------------
 .. image:: images/PersistedGrantTable.png
-   :align: center
+   :align: left

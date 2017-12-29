@@ -11,9 +11,13 @@ Connection Strings - appsettings.json
  ::
 
     "ConnectionStrings": {
-        "IdentityServerConnection": "Server=ABCServer;Database=IdentityServer4;User id=SomeUser;Password=p@ssw0rd;MultipleActiveResultSets=true",
+        "IdentityServerConnection": 
+        "Server=ABCServer;Database=IdentityServer4;User id=SomeUser;
+            Password=p@ssw0rd;MultipleActiveResultSets=true",
 
-        "AspNetIdentityConnection": "Server=ABCServer;Database=AspNetIdentity; User id=SomeUser;Password=p@ssw0rd;MultipleActiveResultSets=true"
+        "AspNetIdentityConnection": 
+        "Server=ABCServer;Database=AspNetIdentity; User id=SomeUser;
+            Password=p@ssw0rd;MultipleActiveResultSets=true"
     },
 
 Database Objects:
