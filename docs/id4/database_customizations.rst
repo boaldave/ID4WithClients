@@ -26,7 +26,7 @@ IdentityServer4
 
 ASPNetIdentity 
 ^^^^^^^^^^^^^^
-:ref:`ASPNetIdentity Database Diagram <refDatabaseDiagramASPNetIdentity>`
+:ref:`ASPNetIdentity Database Diagram <refDatabaseDiagramAspNetIdentity>`
 
 :ref:`Generate Script<refDatabaseGenScriptAspNetIdentity>`
 

@@ -3,6 +3,7 @@ IdentityServer4 Database Generation Script:
 ===========================================
 
 Before running the following script, you need to create the IdentityServer4 Database. Then you can run the following script to setup a Database Login Account::
+
     USE [master]
     GO
     /* For security reasons the login is created disabled and with a random password. */

@@ -1,15 +1,15 @@
 .. _refDatabaseGenScriptAspNetIdentity:
-IdentityServer4 Database Generation Script:
-===========================================
+AspNetIdentity Database Generation Script:
+==========================================
 
 Before running the following script, you need to create the AspNetIdentity Database. Then you can run the following script to setup a Database Login Account::
+
     USE [master]
     GO
     /* For security reasons the login is created disabled and with a random password. */
     /****** Object:  Login [ID4SystemUser]    Script Date: 12/24/2017 1:46:04 PM ******/
     CREATE LOGIN [ID4SystemUser] WITH PASSWORD=N'p@ssw0rd', DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=ON, CHECK_POLICY=ON
     GO
-
 
 Next you can run this script to create all database objects::
 
