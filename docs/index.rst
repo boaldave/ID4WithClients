@@ -1,7 +1,7 @@
 Welcome to CodeQwik's IdentityServer4 Adventures
 ================================================
 
-IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core...the docs are `here.<https://identityserver4.readthedocs.io/en/release/>`_
+IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core...the docs are `here <https://identityserver4.readthedocs.io/en/release>`_
 
 The purpose of this site is to demonstrate how to implement both server-side and client-side ID4 Authentication, in several Client Applications, using various UI technologies. Hopefully this site will help other organizations extend their knowledge of Authentication using ID4.
 
@@ -56,25 +56,25 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: IdentityServer4 Database 
 
-   id4/ID4Database/DatabaseDiagramID4
-   id4/ID4Database/DatabaseGenScriptID4
-   id4/ID4Database/StaticDataID4
+   Database Diagram <id4/ID4Database/DatabaseDiagramID4>
+   Database Gen Script <id4/ID4Database/DatabaseGenScriptID4>
+   Static Data <id4/ID4Database/StaticDataID4>
 
 .. toctree::
    :maxdepth: 5
    :hidden:
    :caption: ASPNetIdentity Database
 
-   id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity
-   id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity
-   id4/ASPNetIdentityDatabase/StaticDataAspNetIdentity
+   Database Diagram <id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity>
+   Database Gen Script <id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity>
+   Static Data <id4/ASPNetIdentityDatabase/StaticDataAspNetIdentity>
  
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Login UI
 
-   login/overview
+   login/index
 
 .. toctree::
    :maxdepth: 2
@@ -82,12 +82,12 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: User Manager
 
    usermanager/LOH
-   usermanager/user_manager
+   usermanager/index
 
 .. toctree::
    :maxdepth: 5
    :hidden:
    :caption: User Profile UI
 
-   userprofile/overview
+   userprofile/index
  

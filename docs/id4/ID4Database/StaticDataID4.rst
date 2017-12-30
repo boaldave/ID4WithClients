@@ -1,13 +1,19 @@
-Static Data
-===========
+.. _refStaticDataID4:
 
-**IdentityServer4 Database** 
+Static Data: IdentityServer4 Database
+=====================================
 
 ClientApp Tables
 ----------------
 
-WebForms Client App
-^^^^^^^^^^^^^^^^^^^
+Angular Client App
+^^^^^^^^^^^^^^^^^^
+
+ASP.Net Core MVC Client App
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ASP.Net WebForms Client App
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``LOH LOH LOH:``
 

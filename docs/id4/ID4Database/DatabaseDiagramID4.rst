@@ -1,7 +1,5 @@
-Database Objects
-================
-
-**IdentityServer4 Database** 
+Database Diagram: IdentityServer4 Database
+==========================================
 
 The ID4 QuickStart applications demonstrate how to configure Authentication Flow by Client Application via the ASP.Net Core Startup.cs class. The other way to configure Authentication Flow for each of your Client Applications is via ID4 Database Customization.
 

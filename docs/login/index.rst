@@ -1,8 +1,11 @@
+Overview 
+========
+
 Register User
 =============
 
-Logic
------
+Functional Spec
+---------------
 
 Code 
 ----
