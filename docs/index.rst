@@ -40,20 +40,16 @@ Federation Gateway
 Support for external identity providers like Azure Active Directory, Google, Facebook etc. This shields your applications from the details of how to connect to these external providers.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :hidden:
    :caption: ID4 Implementation
 
    id4/overview
    id4/LOH
-   id4/client_credentials
-   id4/resource_owner_passwords
-   id4/interactive_login
+   id4/authenticationflows
    id4/external_authentication
-   id4/hybrid_and_api_access
-   id4/aspnet_identity
-   id4/javascript_client
-   id4/entity_framework
+   id4/interactive_login
+   id4/apiaccess
    id4/ID4ConfigurationSettings
 
 .. toctree::
@@ -66,12 +62,13 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    id4/ID4Database/StaticDataID4
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :hidden:
    :caption: ASPNetIdentity Database
 
    id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity
    id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity
+   id4/ASPNetIdentityDatabase/StaticDataAspNetIdentity
  
 .. toctree::
    :maxdepth: 2

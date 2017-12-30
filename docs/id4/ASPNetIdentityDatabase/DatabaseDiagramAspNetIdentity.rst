@@ -1,3 +1,5 @@
+.. _refDatabaseDiagramAspNetIdentity:
+
 Database Objects
 ================
 

@@ -1,9 +1,24 @@
 ID4 Configuration Settings
 ==========================
 
-ID4 configuration settings can be hard-coded in the ASP.Net Core startup.cs file, or can be set in database tables. 
+Asp.Net Identity
+----------------
 
-Two databases must be created one for IdentityServer4 Security Settings and the other for User.  Here are the names of the databases as defined in the Connection Strings and set in the ID4 appsettings.json file.
+Asp.Net Identity 4 is Microsoft's latest incarnation of User Identity implememnting both Authentication and Authorization. It  has built-in support for ID4 and can delegate Authentication to External Authentication Providers like Azure, Google, Facebook, etc.
+
+Entity Framework
+----------------
+
+If we are going to use ASP.Net Identity and rely on ASP.Net Identity to store our User information, then we will have a dependency on EntityFramework and a database.
+
+Database Configuration Settings
+-------------------------------
+
+Two databases will be required for the demonstration. One to store User Information (ASPNetIdentity), the other to store ID4 Configuration data (IdentityServer4).
+
+Please note that the ID4 QuickStarts hard-coded ID4 configuration settings in the ASP.Net Core startup.cs file.  We will not be doing that and instead the settings will be set in ID4 database tables. 
+
+Here are the Connection Strings settings that are set in the ID4 appsettings.json file.
 
  .. code-block:: javascript
 

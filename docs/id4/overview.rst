@@ -1,11 +1,11 @@
 ID4 Implementation Overview
 ===========================
-This project is intended to demonstrate 3rd Party Authentication, so ID4 will be configured to Authenticate Client Applications and Users of Client Applications.
+This project is intended to demonstrate a single implementation of ID4 Authentication for several Client Applications. ID4 will be configured to authenticate the same User Credentials across all Client Applications.
 
 Authentication Flow by UI Technology
 ------------------------------------
 
-Each of the Client Application Technologies require their own Authentication Flows to enable OpenID Connect security compliance. Here is what has been implemented:
+Each of the Client Application technologies require specific Authentication Flows to ensure security resilience. Here is what has been implemented:
 
 ================ ================= ================= ======
 UI Application   Technology        Auth Flow         Spec
