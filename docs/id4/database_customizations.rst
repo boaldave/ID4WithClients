@@ -1,5 +1,6 @@
-IdentityServer4 Database Customizations
-=======================================
+.. _refID4DatabaseCustomizations:
+ID4 Database Customizations
+===========================
 ID4 configuration settings can be hard-coded in the ASP.Net Core startup.cs file, or can be set in database tables. 
 
 ID4 needs data for Functional Setting and for Users (if Users are not stored at an External Identity Provider). There are 2 databases required:
@@ -8,7 +9,7 @@ ID4 needs data for Functional Setting and for Users (if Users are not stored at 
 
 Connection Strings - appsettings.json
 -------------------------------------
- ::
+ .. code-block:: json
 
     "ConnectionStrings": {
         "IdentityServerConnection": 

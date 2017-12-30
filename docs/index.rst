@@ -4,17 +4,26 @@ Welcome to CodeQwik's IdentityServer4 Adventures
 IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.
 - the docs are `here: <https://identityserver4.readthedocs.io/en/release/>`_
 
-The purpose of this site is host our implementations of the following applications and is intended to help other Organizations extend their knowledge of 3rd party Authentication of ASP.Net WebForms, to Xamarin, and Angular.io UI's.
+The purpose of this site is to host 3rd Party Authentication implementations of several UI technologies (ASP.Net WebForms, Xamarin, and Angular) and is intended to help other organizations extend their knowledge of 3rd Party Authentication using ID4.
 
-**PLEASE USE ANY AND ALL INFORMATION ON THIS SITE AT YOUR OWN RISK. NOTHNG ON THIS SITE HAS BEEN VALIDATED BY ANY SECURITY EXPERTS AND THIS DOCUMENT IS PROBABLY IN DRAFT FORM AT THIS VERY MOMENT. WE INVITE YOU TO SUGGEST CORRECTIONS AS SOON AS WE GET OUR BLOG UP AND RUNNING AGAIN AT www.codeqwik.net.**
+**PLEASE USE ANY AND ALL INFORMATION ON THIS SITE AT YOUR OWN RISK. NO SECURITY AUDITS HAVE BEEN PERFORMED, AND THIS DOCUMENT IS PROBABLY IN DRAFT FORM AT THIS VERY MOMENT. WE INVITE YOU TO SUGGEST CORRECTIONS AS SOON AS WE GET OUR BLOG RUNNING AGAIN AT www.codeqwik.net.**
 
 The applications built will include the following:
-- Custom Implementation of IdentityServer4
-- Login UI and User Manager - Technology: Angular.io
-- User Profile UI - Technology: Angular.io
-- User Profile UI - Technology: ASP.Net MVC Core
-- User Profile UI - Technology: ASP.Net WebForms
-- User Profile Web Service - Technology: ASP.Net Core
++-----------------------------------------+-----------------------------------+
+|Application                              | Technology                        |
++=========================================|===================================+
+|Custom Implementation of IdentityServer4 | Asp.Net Core 2.0                  |
++-----------------------------------------|-----------------------------------+
+|Login UI and User Manager                | Angular                           |
++-----------------------------------------|-----------------------------------+
+|User Profile UI                          | Angular                           |
++-----------------------------------------|-----------------------------------+
+|User Profile UI                          | ASP.Net MVC Core                  |
++-----------------------------------------|-----------------------------------+
+|User Profile UI                          | ASP.Net WebForms                  |
++-----------------------------------------|-----------------------------------+
+|User Profile Web Service                 | ASP.Net Core                      |
++-----------------------------------------+-----------------------------------+
 
 The applications built will demonstrate the following ID4 Features:
 
@@ -48,6 +57,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 
    id4/overview
    id4/database_customizations
+   id4/LOH
    id4/client_credentials
    id4/resource_owner_passwords
    id4/interactive_login
@@ -62,6 +72,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: Login UI and User Manager
 
+   loginandusermanager/LOH
    loginandusermanager/overview
    loginandusermanager/register_user
    loginandusermanager/login
@@ -76,6 +87,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: User Profile UI - Angular.io
 
+   userprofileng/LOH
    userprofileng/overview
    userprofileng/code
 
@@ -84,6 +96,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: User Profile UI - ASP.Net MVC
 
+   userprofilemvc/LOH
    userprofilemvc/overview
    userprofilemvc/code
 
@@ -92,14 +105,15 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: User Profile UI - ASP.Net WebForms
 
+   userprofilewebforms/LOH
    userprofilewebforms/overview
    userprofilewebforms/code
-
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: User Profile WebService
 
+   userprofilewebservice/LOH
    userprofilewebservice/overview
    userprofilewebservice/code
