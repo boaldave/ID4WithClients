@@ -1,4 +1,6 @@
-Static Data
+Static Data 
 ===========
 
-There are no Static Data Scripts.  Please review the `ASP.Net Identity Database Objects<refDatabaseDiagramAspNetIdentity>` for more information on the decision behind the lack of static data.
+**AspNetIdentity Database** 
+
+There are no Static Data Scripts.  Please review the AspNetIdentity  :ref:`refDatabaseDiagramAspNetIdentity` for more information on the decision behind the lack of static data.

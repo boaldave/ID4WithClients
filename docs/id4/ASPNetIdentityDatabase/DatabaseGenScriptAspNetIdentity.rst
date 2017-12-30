@@ -3,6 +3,8 @@
 Database Generation Script
 ==========================
 
+**AspNetIdentity Database** 
+
 ID4 also needs a storage mechanism for Users (if Users are not stored at an External Identity Provider). We selected ASP.Net Identity.
 
 First create the ASPNetIdentity Database, then run the following script to setup a Database Login Account:

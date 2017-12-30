@@ -1,6 +1,8 @@
 Database Generation Script
 ==========================
 
+**IdentityServer4 Database** 
+
 ID4 needs data to configure the clients and their Authorization Flows.
 
 First create the IdentityServer4 Database, then run the following script to setup a Database Login Account:
