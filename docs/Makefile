@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = ID4ClientTest
+SPHINXPROJ    = ID4WithClients
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -7,19 +7,13 @@ Authentication Flow by UI Technology
 
 Each of the Client Application Technologies require their own Authentication Flows to enable OpenID Connect security compliance. Here is what has been implemented:
 
-================ ================= =================
-UI Application   Technology        Auth Flow        
-================ ================= =================
-Login UI         Angular           Client Credential
-User Manager     Angular           Client Credential
-User Profile UI  Angular           Client Credential
-User Profile UI  ASP.Net MVC Core  Resource Owner   
-User Profile UI  ASP.Net WebForms  Resource Owner   
-User Profile UI  Xamarin           Hybrid Auth Code 
-================ ================= =================
-
-Auth Flow Configuration via ID4 Database Customization
-------------------------------------------------------
-
-The ID4 QuickStart applications show you how to configure Authentication Flow by Client Application via the ASP.Net Core Startup.cs class. The other way to configure Authentication Flow for each of your Client Applications is via ID4 Database Customization.
-
+================ ================= ================= ======
+UI Application   Technology        Auth Flow         Spec
+================ ================= ================= ======
+Login UI         Angular           Implicit Flow     OpenID
+User Manager     Angular           Implicit Flow     OpenID
+User Profile UI  Angular           Implicit Flow     OpenID
+User Profile UI  ASP.Net MVC Core  Resource Owner    OAuth2
+User Profile UI  ASP.Net WebForms  Resource Owner    OAuth2
+User Profile UI  Xamarin           Hybrid Auth Code  OpenID
+================ ================= ================= ======

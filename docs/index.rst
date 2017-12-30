@@ -24,25 +24,25 @@ User Profile Web Service                 ASP.Net Core
 The applications built will demonstrate the following ID4 Features:
 
 Authentication as a Service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 Centralized login logic and varying workflow for the following types of applications: Web UI (Angular.io, ASP.Net MVC, ASP.Net WebForms), Native Mobile (Xamarin), Web Services (ASP.Net Core).
 
 Both Independent and Single Sign-on / Sign-out
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------
 Independent sign-on (and out) is when you login to A Browser app, and also have to login to a Xamarin Mobile App app even if you run them at the same time with the same user. Single sign-on (and out) allows you to login (and out) once over multiple application types. You sign-in to one, and you are signed in to them all.
 
 Access Control for APIs by Client Application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 Issue access tokens for APIs for various types of clients, e.g. server to server, web applications, SPAs and native/mobile apps.
 
 Federation Gateway
-^^^^^^^^^^^^^^^^^^
+------------------
 Support for external identity providers like Azure Active Directory, Google, Facebook etc. This shields your applications from the details of how to connect to these external providers.
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: ID4 Customization
+   :caption: ID4 Implementation
 
    id4/overview
    id4/LOH
@@ -57,19 +57,18 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    id4/ID4ConfigurationSettings
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :hidden:
-   :caption: Database Customization ID4
+   :caption: IdentityServer4 Database 
 
    id4/ID4Database/DatabaseDiagramID4
    id4/ID4Database/DatabaseGenScriptID4
-   id4/ID4Database/StaticDataID4ClientAppTables
-   id4/ID4Database/StaticDataID4ApiResourcesTables
+   id4/ID4Database/StaticDataID4
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Database Customization ASPNet
+   :caption: ASPNetIdentity Database
 
    id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity
    id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity
@@ -79,14 +78,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :hidden:
    :caption: Login UI
 
-   login/LOH
    login/overview
-   login/login
-   login/register_user
-   login/forgot_password
-   login/reset_password
-   login/terms_and_conditions
-   login/logout
 
 .. toctree::
    :maxdepth: 2
@@ -97,34 +89,9 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    usermanager/user_manager
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :hidden:
-   :caption: User Profile UI - Angular.io
+   :caption: User Profile UI
 
-   userprofileng/LOH
-   userprofileng/overview
-   userprofileng/code
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: User Profile UI - ASP.Net MVC
-
-   userprofilemvc/LOH
-   userprofilemvc/overview
+   userprofile/overview
  
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: User Profile UI - ASP.Net WebForms
-
-   userprofilewebforms/LOH
-   userprofilewebforms/overview
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: User Profile WebService
-
-   userprofilewebservice/LOH
-   userprofilewebservice/overview

@@ -1,13 +1,22 @@
-.. _refStaticDataID4ClientAppTables:
+Static Data
+===========
 
-Static Data: ID4 Database ClientApp Tables:
-===========================================
+ClientApp Tables
+----------------
 
-''LOH LOH LOH:''
+WebForms Client App
+^^^^^^^^^^^^^^^^^^^
+
+``LOH LOH LOH:``
 
    The following scripts require a lot of explanation, as they define the behavior of Identity Server 4, and every column counts.
 
-Here are the static data scripts::
+Clients
+~~~~~~~
+
+``AbsoluteRefreshTokenLifetime`` - This defines how long a RefreshToken can be used to get an AccessToken, ``AccessTokenLifetime`` - LOH
+
+.. code-block:: sql
 
     DECLARE @webFormsClientId INT = 1
     DECLARE @aspNetMvcClientId INT = 2
@@ -90,12 +99,39 @@ Here are the static data scripts::
            ,1296000			--<SlidingRefreshTokenLifetime, int,>
            ,0)				--<UpdateAccessTokenClaimsOnRefresh, bit,>)
 
+    SET IDENTITY_INSERT [dbo].[Clients] OFF
+
+
+ClientGrantTypes
+~~~~~~~~~~~~~~~~
+
+``GrantType`` - "password" refers to OAuth2 Resource Owner Password Credentials Flow.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
+
 	INSERT INTO [dbo].[ClientGrantTypes]
 			   ([ClientId]
 			   ,[GrantType])
 		 VALUES
 			   (@webFormsClientId
-			   ,'password'),
+			   ,'password')
+
+ClientSecrets
+~~~~~~~~~~~~~
+
+``Expiration`` - null means it never expires, ``SharedSecret`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
 
 	INSERT INTO [dbo].[ClientSecrets]
 			   ([ClientId]
@@ -111,6 +147,18 @@ Here are the static data scripts::
 			   ,'K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols=')	
 			       --<Value, nvarchar(2000),>) "secret".Sha256()
 
+ClientScopes
+~~~~~~~~~~~~
+
+``Expiration`` - null means it never expires, ``SharedSecret`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
+
 	INSERT INTO [dbo].[ClientScopes]
 			   ([ClientId]
 			   ,[Scope])
@@ -118,14 +166,35 @@ Here are the static data scripts::
 			   (@webFormsClientId	--<ClientId, int,>
 			   ,'WebFormsApp')		--<Scope, nvarchar(200),>)
 
+Other Tables
+~~~~~~~~~~~~
+
+No Static Data.
+
+.. code-block:: sql
+
     --[dbo].[ClientClaims] has no records
     --[dbo].[ClientRedirectUris] has no records
     --[dbo].[ClientPostLogoutRedirectUris] has no records
     --[dbo].[ClientCorsOrigins] has no records
     --[dbo].[ClientIdPRestrictions] has no records
 
-    --// Xamarin Client //
-    	INSERT INTO [dbo].[Clients]
+Xamarin Client App
+^^^^^^^^^^^^^^^^^^
+
+Clients
+~~~~~~~
+
+``AbsoluteRefreshTokenLifetime`` - This defines how long a RefreshToken can be used to get an AccessToken, ``AccessTokenLifetime`` - LOH
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
+
+    INSERT INTO [dbo].[Clients]
            ([Id]
            ,[AbsoluteRefreshTokenLifetime]
            ,[AccessTokenLifetime]
@@ -198,12 +267,38 @@ Here are the static data scripts::
            ,1296000			--<SlidingRefreshTokenLifetime, int,>
            ,0)				--<UpdateAccessTokenClaimsOnRefresh, bit,>)
 
+    SET IDENTITY_INSERT [dbo].[Clients] OFF
+
+ClientGrantTypes
+~~~~~~~~~~~~~~~~
+
+``GrantType`` - "hybrid" refers to OpenID Connect modified OAuth2 Authorization Code Flow.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
+
 	INSERT INTO [dbo].[ClientGrantTypes]
 			   ([ClientId]
 			   ,[GrantType])
 		 VALUES
 			   (@xamarinClient
 			   ,'hybrid'),
+
+ClientSecrets
+~~~~~~~~~~~~~
+
+``Expiration`` - null means it never expires, ``SharedSecret`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
 
 	INSERT INTO [dbo].[ClientSecrets]
 			   ([ClientId]
@@ -218,6 +313,18 @@ Here are the static data scripts::
 			   ,'SharedSecret'	  --<Type, nvarchar(250),>
 			   ,'K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols=')	
 			       --<Value, nvarchar(2000),>) "secret".Sha256()
+
+ClientScopes
+~~~~~~~~~~~~
+
+``Expiration`` - null means it never expires, ``SharedSecret`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
 
 	INSERT INTO [dbo].[ClientScopes]
 			   ([ClientId]
@@ -238,12 +345,36 @@ Here are the static data scripts::
 
     --[dbo].[ClientClaims] has no records
 
+ClientRedirectUris
+~~~~~~~~~~~~~~~~~~
+
+``RedirectUri`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
+
     INSERT INTO [dbo].[ClientRedirectUris]
             ([ClientId]
             ,[RedirectUri])
         VALUES
             (@xamarinClient
             ,'biincofficermobile://auth')
+
+ClientPostLogoutRedirectUris
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``RedirectUri`` - LOH.
+
+.. code-block:: sql
+
+    DECLARE @webFormsClientId INT = 1
+    DECLARE @aspNetMvcClientId INT = 2
+    DECLARE @xamarinClientId INT = 3
+    DECLARE @angularClientId INT = 4
 
     INSERT INTO [dbo].[ClientPostLogoutRedirectUris]
             ([ClientId]
@@ -252,11 +383,144 @@ Here are the static data scripts::
             (@xamarinClient
             ,'biincofficermobile://afterLogout')
 
+Other Tables
+~~~~~~~~~~~~~~~~
+
+No Static Data.
+
+.. code-block:: sql
+
     --[dbo].[ClientCorsOrigins] has no records
     --[dbo].[ClientIdPRestrictions] has no records
  
  
-   SET IDENTITY_INSERT [dbo].[Clients] OFF
+APIResources Tables
+-------------------
 
-END 
-GO
+The following scripts require a lot of explanation, as they define the behavior of Identity Server 4, and every column counts.
+
+''LOH LOH LOH:''
+
+   #Why do the Resource and Scope have the same name?
+
+Here are the static data scripts::
+
+    DECLARE @apiResourceId_SomeCompanysAPI INT = 1
+    DECLARE @apiResourceId_OpenID INT = 2
+    DECLARE @apiResourceId_Profile INT = 3
+    DECLARE @apiScopesId_SomeCompanysAPI INT = 1
+    DECLARE @apiScopesId_OpenID INT = 2
+    DECLARE @apiScopesId_Profile INT = 3
+    DECLARE @apiScopeId INT = 1
+
+    SET IDENTITY_INSERT [dbo].[ApiResources] ON
+    INSERT INTO [dbo].[ApiResources]
+            ([Id]
+            ,[Description]
+            ,[DisplayName]
+            ,[Enabled]
+            ,[Name])
+        VALUES
+            (
+                @apiResourceId_SomeCompanysAPI
+                ,'SomeCompanysAPI'
+                ,'SomeCompanysAPI'
+                ,1
+                ,'SomeCompanysAPI'
+            ),
+            (
+                @apiResourceId_OpenID
+                ,'Open ID'
+                ,'Open ID'
+                1
+                'openid'
+            ),
+            (
+                @apiResourceId_Profile
+                ,'Profile'
+                ,'Profile'
+                1
+                'profile'
+            )
+
+    SET IDENTITY_INSERT [dbo].[ApiScopes] ON
+    INSERT INTO [dbo].[ApiScopes]
+            ([Id]
+            ,[ApiResourceId]
+            ,[Description]
+            ,[DisplayName]
+            ,[Emphasize]
+            ,[Name]
+            ,[Required]
+            ,[ShowInDiscoveryDocument])
+        VALUES
+            (@apiScopeId_SomeCompanysAPI
+            ,@apiResourceId_SomeCompanysAPI
+            ,'SomeCompanysAPI'
+            ,'SomeCompanysAPI'
+            ,0
+            ,'SomeCompanysAPI'
+            ,0
+            ,1)
+    INSERT INTO [dbo].[ApiScopes]
+            ([Id]
+            ,[ApiResourceId]
+            ,[Description]
+            ,[DisplayName]
+            ,[Emphasize]
+            ,[Name]
+            ,[Required]
+            ,[ShowInDiscoveryDocument])
+        VALUES
+            (@apiScopeId_OpenID
+            ,@apiResourceId_OpenID
+            ,'Open ID'
+            ,'Open ID'
+            ,0
+            ,'openid'
+            ,0
+            ,1)
+    INSERT INTO [dbo].[ApiScopes]
+            ([Id]
+            ,[ApiResourceId]
+            ,[Description]
+            ,[DisplayName]
+            ,[Emphasize]
+            ,[Name]
+            ,[Required]
+            ,[ShowInDiscoveryDocument])
+        VALUES
+            (@apiScopeId_Profile
+            ,@apiResourceId_Profile
+            ,'Profile'
+            ,'Profile'
+            ,0
+            ,'profile'
+            ,0
+            ,1)
+
+    SET IDENTITY_INSERT [dbo].[ApiScopeClaims] ON
+    INSERT INTO [dbo].[ApiScopeClaims]
+        ([ApiScopeId]
+        ,[Type])
+    VALUES
+        (
+            @apiScopeId_Profile
+            ,'name'
+        )
+
+    SET IDENTITY_INSERT [dbo].[ApiClaims] ON
+    INSERT INTO dbo.ApiClaims 
+        (
+            ApiResourceId, 
+            Type) 
+        VALUES	
+        (
+            @apiResourceId_SomeCompanysAPI, 
+            N'UserId'
+        )
+
+    SET IDENTITY_INSERT [dbo].[ApiClaims] OFF
+    SET IDENTITY_INSERT [dbo].[ApiScopeClaims] OFF
+    SET IDENTITY_INSERT [dbo].[ApiScopes] OFF
+    SET IDENTITY_INSERT [dbo].[ApiResources] ON

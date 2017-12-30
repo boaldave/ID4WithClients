@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# ID4ClientTest documentation build configuration file, created by
+# ID4WithClients documentation build configuration file, created by
 # sphinx-quickstart on Fri Dec 29 18:33:13 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'ID4ClientTest'
+project = 'ID4WithClients'
 copyright = '2017, Dave Boal'
 author = 'Dave Boal'
 
@@ -155,7 +155,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ID4ClientTest.tex', 'ID4ClientTest Documentation',
+    (master_doc, 'ID4WithClients.tex', 'ID4WithClients Documentation',
      'Dave Boal', 'manual'),
 ]
 
@@ -165,7 +165,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'id4clienttest', 'ID4ClientTest Documentation',
+    (master_doc, 'id4withclients', 'ID4WithClients Documentation',
      [author], 1)
 ]
 
@@ -176,8 +176,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ID4ClientTest', 'ID4ClientTest Documentation',
-     author, 'ID4ClientTest', 'One line description of project.',
+    (master_doc, 'ID4WithClients', 'ID4WithClients Documentation',
+     author, 'ID4WithClients', 'One line description of project.',
      'Miscellaneous'),
 ]
 
