@@ -1,4 +1,0 @@
-﻿
-
-Make sure to publish the certs directory. It needs to be in the release with the .pfx file for the application to find it in the non-local environments.
-
