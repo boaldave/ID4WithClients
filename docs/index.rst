@@ -4,9 +4,9 @@ Welcome to CodeQwik's IdentityServer4 Adventures
 IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core.
 - the docs are `here: <https://identityserver4.readthedocs.io/en/release/>`_
 
-The purpose of this site is to host 3rd Party Authentication implementations of several UI technologies (ASP.Net WebForms, Xamarin, and Angular) and is intended to help other organizations extend their knowledge of 3rd Party Authentication using ID4.
+The purpose of this site is to demonstrate how to implement both server-side and client-side ID4 Authentication, in several Client Applications, using various UI technologies. Hopefully this site will help other organizations extend their knowledge of Authentication using ID4.
 
-**PLEASE USE ANY AND ALL INFORMATION ON THIS SITE AT YOUR OWN RISK. NO SECURITY AUDITS HAVE BEEN PERFORMED, AND THIS DOCUMENT IS PROBABLY IN DRAFT FORM AT THIS VERY MOMENT. WE INVITE YOU TO SUGGEST CORRECTIONS AS SOON AS WE GET OUR BLOG RUNNING AGAIN AT www.codeqwik.net.**
+**PLEASE USE ANY AND ALL INFORMATION ON THIS SITE AT YOUR OWN RISK. NO SECURITY AUDITS HAVE BEEN PERFORMED, AND AT THIS VERY MOMENT, THIS DOCUMENT IS PROBABLY IN DRAFT FORM. WE INVITE YOU TO SUGGEST CORRECTIONS AS SOON AS WE GET OUR BLOG RUNNING AGAIN AT www.codeqwik.net.**
 
 The applications built will include the following:
 
@@ -42,17 +42,9 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Introduction
-
-   intro/preamble
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: ID4 Customization
 
    id4/overview
-   id4/database_customizations
    id4/LOH
    id4/client_credentials
    id4/resource_owner_passwords
@@ -62,21 +54,47 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    id4/aspnet_identity
    id4/javascript_client
    id4/entity_framework
+   id4/ID4ConfigurationSettings
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Database Customization ID4
+
+   id4/ID4Database/DatabaseDiagramID4
+   id4/ID4Database/DatabaseGenScriptID4
+   id4/ID4Database/StaticDataID4ClientAppTables
+   id4/ID4Database/StaticDataID4ApiResourcesTables
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Database Customization ASPNet
+
+   id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity
+   id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity
  
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Login UI and User Manager
+   :caption: Login UI
 
-   loginandusermanager/LOH
-   loginandusermanager/overview
-   loginandusermanager/register_user
-   loginandusermanager/login
-   loginandusermanager/logout
-   loginandusermanager/forgot_password
-   loginandusermanager/reset_password
-   loginandusermanager/terms_and_conditions
-   loginandusermanager/user_manager
+   login/LOH
+   login/overview
+   login/login
+   login/register_user
+   login/forgot_password
+   login/reset_password
+   login/terms_and_conditions
+   login/logout
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: User Manager
+
+   usermanager/LOH
+   usermanager/user_manager
 
 .. toctree::
    :maxdepth: 2
@@ -94,8 +112,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 
    userprofilemvc/LOH
    userprofilemvc/overview
-   userprofilemvc/code
-
+ 
 .. toctree::
    :maxdepth: 2
    :hidden:
@@ -103,7 +120,6 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 
    userprofilewebforms/LOH
    userprofilewebforms/overview
-   userprofilewebforms/code
 
 .. toctree::
    :maxdepth: 2
@@ -112,4 +128,3 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 
    userprofilewebservice/LOH
    userprofilewebservice/overview
-   userprofilewebservice/code

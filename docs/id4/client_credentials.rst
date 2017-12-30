@@ -1,2 +1,2 @@
-Asp>Net Identity
-================
+Client Credentials
+==================

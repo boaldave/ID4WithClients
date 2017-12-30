@@ -1,9 +1,11 @@
 .. _refStaticDataID4ClientAppTables:
+
 Static Data: ID4 Database ClientApp Tables:
 ===========================================
 
 ''LOH LOH LOH:''
-The following scripts require a lot of explanation, as they define the behavior of Identity Server 4, and every column counts.
+
+   The following scripts require a lot of explanation, as they define the behavior of Identity Server 4, and every column counts.
 
 Here are the static data scripts::
 

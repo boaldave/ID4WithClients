@@ -1,8 +1,11 @@
 .. _refDatabaseGenScriptAspNetIdentity:
+
 AspNetIdentity Database Generation Script:
 ==========================================
 
-Before running the following script, you need to create the AspNetIdentity Database. Then you can run the following script to setup a Database Login Account:
+ID4 also needs a storage mechanism for Users (if Users are not stored at an External Identity Provider). We selected ASP.Net Identity.
+
+First create the ASPNetIdentity Database, then run the following script to setup a Database Login Account:
 
 .. code-block:: sql
 
@@ -15,7 +18,7 @@ Before running the following script, you need to create the AspNetIdentity Datab
         CHECK_POLICY=ON
     GO
 
-Next you can run this script to create all database objects:
+Next, run this script to create all database objects:
 
 .. code-block:: sql
 
