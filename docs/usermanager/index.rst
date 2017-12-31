@@ -1,20 +1,24 @@
-**Document History**
-
-======== ===================== ===============================================================
-Date     Author                Description
-======== ===================== ===============================================================
-20171229 Dave Boal             Created Outline
-20171230 Dave Boal             Modified Outline
-======== ===================== ===============================================================
-
 Overview
 ========
 
-Business Requirements
-=====================
+User List
+=========
 
-Functional Spec
-===============
+Use Cases
+---------
 
 Code
-====
+----
+
+User Edit
+=========
+
+Use Cases
+---------
+
+1. Administrative User should be able to Inactivate a User.
+
+
+Code
+----
+

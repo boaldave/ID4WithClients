@@ -4,8 +4,8 @@ Overview
 Register User
 =============
 
-Functional Spec
----------------
+Use Cases
+---------
 
 Code 
 ----

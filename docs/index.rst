@@ -1,7 +1,18 @@
+**Document History**
+
+======== ===================== ===============================================================
+Date     Author                Description
+======== ===================== ===============================================================
+20171222 Dave Boal             Project Definition
+20171223 Dave Boal             In Progress: Database Documentation
+20171228 Dave Boal             In Progress: Authorization Flow Documentation
+20180102 Dave Boal             In Progress: Angular Login Documentation
+======== ===================== ===============================================================
+
 Welcome to CodeQwik's IdentityServer4 Adventures
 ================================================
 
-IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework for ASP.NET Core...the docs are `here. <https://identityserver4.readthedocs.io/en/release>`_
+IdentityServer4 (ID4) is an OpenID Connect and OAuth 2.0 framework written in ASP.NET Core 2.0...the docs are `here. <https://identityserver4.readthedocs.io/en/release>`_
 
 The purpose of this site is to demonstrate how to implement both server-side and client-side ID4 Authentication, in several Client Applications, using various UI technologies. Hopefully this site will help other organizations extend their knowledge of Authentication using ID4.
 
@@ -28,7 +39,7 @@ Centralized login logic and varying workflow for the following types of applicat
 
 Both Independent and Single Sign-on / Sign-out
 ----------------------------------------------
-Independent sign-on (and out) is when you login to A Browser app, and also have to login to a Xamarin Mobile App app even if you run them at the same time with the same user. Single sign-on (and out) allows you to login (and out) once over multiple application types. You sign-in to one, and you are signed in to them all.
+Independent sign-on (and out) is when you login to a Browser app, and also have to login to a Xamarin Mobile App app even if you run them at the same time with the same user. Single sign-on (and out) allows you to login (and out) once over multiple application types. You sign-in to one, and you are signed in to them all.
 
 Access Control for APIs by Client Application
 ---------------------------------------------
@@ -44,8 +55,8 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: ID4 Implementation
 
    id4/overview
-   id4/LOH
    id4/authenticationflows
+   id4/LOH
    id4/external_authentication
    id4/interactive_login
    id4/apiaccess
@@ -57,6 +68,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: IdentityServer4 Database 
 
    Database Diagram <id4/ID4Database/DatabaseDiagramID4>
+   id4/ID4Database/LOH
    Database Gen Script <id4/ID4Database/DatabaseGenScriptID4>
    Static Data <id4/ID4Database/StaticDataID4>
 
@@ -66,6 +78,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: ASPNetIdentity Database
 
    Database Diagram <id4/ASPNetIdentityDatabase/DatabaseDiagramAspNetIdentity>
+   id4/ASPNetIdentityDatabase/LOH
    Database Gen Script <id4/ASPNetIdentityDatabase/DatabaseGenScriptAspNetIdentity>
    Static Data <id4/ASPNetIdentityDatabase/StaticDataAspNetIdentity>
  
@@ -87,7 +100,37 @@ Support for external identity providers like Azure Active Directory, Google, Fac
 .. toctree::
    :maxdepth: 5
    :hidden:
-   :caption: User Profile UI
+   :caption: User Profile WebApi
 
-   userprofile/index
+   userprofilewebapi/index
+
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: User Profile UI - NG
+
+   userprofileng/LOH
+   userprofileng/index
+
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: User Profile UI - Xamarin
+
+   userprofilexamarin/LOH
+   userprofilexamarin/index
+ 
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: User Profile UI - WebForms
+
+   userprofileaspwebforms/index
+ 
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: User Profile UI - MVC
+
+   userprofileaspmvc/index
  
