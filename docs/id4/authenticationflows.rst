@@ -4,18 +4,28 @@ Authorization Flows
 Overview
 --------
 
-Authorization Flows are called Authorization Flows, but have been used historically for Authentication, the assumption being if an Authorization Flow authorizes a User to do something, they must be Authenticated.
+The specific the request/response exchange associated with these flows will be discussed in more detail, in the code implmentation sections. This section provides a high level discussion. Here are links to the code sections:
 
-A flow usually starts with an Unauthenticated User asking a UI Application for a protected UI resource, then the UI requesting an AccessToken from ID4 by routing the User to a login page. Once the UI Application receives an AccessToken from ID4, the UI validates it, then grants access to the UI Resource. The UI may also pass that AccessToken to a WebAPI Resource, who also validates it, then grants access to the WebApi Resource.
+* :ref:`User Profile NG <refuserprofileng>`
+* :ref:`User Profile Xamarin <refuserprofilexamarin>`
+* :ref:`User Profile WebForms <refuserprofileaspwebforms>`
+* :ref:`User Profile MVC <refuserprofileaspmvc>`
+* :ref:`User Profile WebApi <refuserprofilewebapi>`
+
+Authorization Flows have been used historically implicitly for Authentication, the assumption being if an Authorization Flow authorizes a User to do something, they must be Authenticated.
+
+A flow usually starts with an Unauthenticated User asking a UI Application for a protected UI resource, and the UI checking to see if the User is Authorized, and if not routing the User to a login page. Once the User's credentials are authenticated, the UI Application receives an AccessToken from ID4, the UI validates it, then grants access to the UI Resource. The UI may also pass that AccessToken to a WebAPI Resource, who also validates it, then grants access to the WebApi Resource.
 
 You might wonder how the validation is accomplished. When a User succesfully logs into ID4, ID4 creates and returns an AccessToken that contains Claims, which can be statements about the User, the UI Application, and/or the WebApi Application. The UI and the WebApi Applications, can query the AccessToken Claims to decide if the AccessToken is valid.
 
 You can start to see a system that needs to contain, in addition to Users,  several other data points:
+
 * User Claims
 * UI (Client) Application Claims
 * WebApi Resource Application Claims
 
 Each time the User requests either a UI or WebApi Resource, those applications may decide to check to see if the User has logged off and/or if the AccessToken has expired, or needs to be refreshed because it is about to expire. AccessTokens need to be "destroyed". You can now see how you might need further data points like:
+
 * AccessToken Grant History with live and expired AccessToken data
 
 Client (App) Credentials Flow

@@ -110,7 +110,7 @@ Support for external identity providers like Azure Active Directory, Google, Fac
    :caption: User Profile UI - NG
 
    userprofileng/LOH
-   userprofileng/index
+   Overview <userprofileng/index>
 
 .. toctree::
    :maxdepth: 5

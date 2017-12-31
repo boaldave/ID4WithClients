@@ -1,10 +1,12 @@
+.. _refuserprofilewebapi:
+
 Overview
 ========
 
 The majority of the documentation will discuss the `GitHub Angular App written by Eric Anderson <https://github.com/elanderson/Angular-Core-IdentityServer>`_.
 
-NG Code
-=======
+WebApi Code
+===========
 
 Components
 ----------
